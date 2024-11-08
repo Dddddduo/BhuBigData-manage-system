@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+#下面这些内容是为了让MyBatis映射
+#指定Mybatis的Mapper文件
+
+# 专门用来配置的对象datasource
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC
+      username: root
+      password: 123456
+
+# 配置mybatis-plus
+mybatis-plus:
+  global-config:
+    db—config:
+      table-prefix: tbl_
+
+configuration:
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
